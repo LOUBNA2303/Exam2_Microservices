@@ -1,0 +1,25 @@
+server:
+  port: 8010
+spring:
+  data:
+    mongodb:
+      username: loubna
+      password: loubna
+      host: localhost
+      port: 27018
+      database: customer
+      authentication-database: admin
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: transactionConfirmation:com.example.transactionservice.kafka.TransactionConfirmation
+
+
+
+application:
+  config:
+  produit-url: http://localhost:8222/api/v1/produits
+  notification-url: http://localhost:8222/api/v1/notification

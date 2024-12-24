@@ -1,0 +1,16 @@
+server:
+  port: 8010
+spring:
+  data:
+    mongodb:
+      username: loubna
+      password: loubna
+      host: localhost
+      port: 27018
+      database: customer
+      authentication-database: admin
+
+application:
+  config:
+  notification-url: http://localhost:8222/api/v1/notification
+  commandes-url: http://localhost:8222/api/v1/commandes
